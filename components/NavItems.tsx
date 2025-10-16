@@ -1,6 +1,6 @@
 'use client'
 
-import {NAV_ITEMs} from "@/lib/constants";
+import {NAV_ITEMS} from "@/lib/constants";
 import {usePathname} from "next/navigation";
 import Link from "next/link"; // Adição: Importação do componente Link
 
@@ -13,7 +13,7 @@ const NavItems = () => {
 
     return (
         <ul className="flex flex-col sm:flex-row p-2 gap-3 sm:gap-10 font-medium">
-            {NAV_ITEMs.map(     ({ href, label }) => (
+            {NAV_ITEMS.map(     ({ href, label }) => (
                 <li key={href}>
                     {/* Uso Correto: Componente Link (L maiúsculo) */}
                     <Link href={href} className={`hover:text-yellow-600 transition-colors ${
